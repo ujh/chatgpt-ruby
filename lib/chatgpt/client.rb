@@ -49,7 +49,7 @@ module ChatGPT
       }
       
       # Make the request to the API
-      request_api(url, data)
+      request_api(url, params.merge(data))
     end
 
 
@@ -75,13 +75,13 @@ module ChatGPT
         model: model,
         messages: messages
       }
-      
+
       # Make the API request and return the response.
-      request_api(url, data)
+      request_api(url, params.merge(data))
     end
 
-
     private
+
     # Make a request to the API
     #
     # @param url [String] The URL for the request
